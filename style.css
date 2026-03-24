@@ -1,6 +1,6 @@
 body {
-  background-image: url("Sprinkles.jpg");
-  background-color: hsl(213, 85%, 92%);
+  background-image: url("https://bunny-wp-pullzone-5vqgtgkbhi.b-cdn.net/wp-content/uploads/2023/04/Hay-1300x867.jpg");
+  background-color: hsl(213, 30%, 69%);
   background-blend-mode: overlay;
   text-align: center;
   background-size: cover;
@@ -12,14 +12,6 @@ body {
 html{
   height: 100%;
   width: 100%;
-}
-
-#myCanvas1 {
-  border: 1px solid black;
-  background-image: url("supermarket-interior-shelf_165488-3982.avif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #myCanvas2 {

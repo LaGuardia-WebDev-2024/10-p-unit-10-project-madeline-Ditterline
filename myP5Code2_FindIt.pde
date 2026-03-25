@@ -1,13 +1,14 @@
 var hayXPos = [];
 var hayYPos = [];
 var hay = "🌾";
-var hayTotal = 200;
+var hayTotal = 270;
 
 var needleXPos = [];
 var needleYPos = [];
 var needle = "💉";
 var needleTotal = 3;
 var needleFound = 0;
+
 
 setup = function() {
    size(600, 450); 
@@ -21,6 +22,8 @@ draw = function(){
     if(key == 'r'){
       reset();
     }
+  
+    
    }
 
   display();
@@ -43,19 +46,29 @@ var check = function(xClick, yClick){
 
 var display = function(){
   background(100,100,100,0);
-
-  fill(200,200,0);
-  textSize(20);
-
-  for(var i = 0; i < needleXPos.length; i ++){
-    text(needle, needleXPos[i], needleYPos[i]);
-  }
-
+ textSize(50);
+ var x = 0;
+ 
+//fencelines
+var y = 0;
+for(let y = 0; y < 450; y += 20){
+line(0,y,600,y);
+}
+//fence
+ while(x<600){
+    text("🚧", x, 400);
+    x += 50;
+    }
   for(var i = 0; i < hayXPos.length; i ++){
     textSize(35);
     text(hay, hayXPos[i], hayYPos[i]);
   }
+fill(200,200,0);
+  textSize(15);
 
+  for(var i = 0; i < needleXPos.length; i ++){
+    text(needle, needleXPos[i], needleYPos[i]);
+  }
   fill(0,0,0);
   rect(0,400,600,50);
   fill(255,255,255);

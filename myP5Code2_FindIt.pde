@@ -22,6 +22,11 @@ draw = function(){
     if(key == 'r'){
       reset();
     }
+    if(keyPressed){
+      if(key == 'e'){
+        text("Wrong Key! Press R",250,250);
+      }
+    }
   
     
    }
@@ -74,12 +79,24 @@ fill(200,200,0);
   fill(255,255,255);
   text("Find The " + needle + "s   |   " + needle + " " + needleFound + "/" + needleTotal, 0, 425);
 
+//array
+var sentence =["how","many","needles","can","you","find","?"]
+fill(255,0,0);
+textSize(20);
+text(sentence[0],175,425);
+text(sentence[1],215,425);
+text(sentence[2],268,425);
+text(sentence[3],341,425);
+text(sentence[4],377,425);
+text(sentence[5],415,425);
+text(sentence[6],448,425);
+
+
   if(needleFound == needleTotal){
     fill(255, 1, 1);
     textSize(50);
     text("Press 'r' to restart \nthe game", 50, 200);
-  }
-}
+  }}
 
 var reset = function(){
   hayXPos = [];
